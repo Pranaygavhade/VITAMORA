@@ -3,380 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VITAMORA - Pure Nature. Powerful Health. Premium Moringa and Amla powder supplements">
-    <title>VITAMORA - Natural Health Supplements</title>
+    <meta name="description" content="VITAMORA - Pure Moringa & Amla Powder Direct from Farms">
+    <title>VITAMORA – Pure Nutrition from Nature</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Loader -->
     <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="leaf-icon">🌿</div>
-            <h2>VITAMORA</h2>
+        <div class="loader-inner">
+            <div class="loader-leaf">🌿</div>
+            <div class="loader-brand">VITAMORA</div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
         </div>
     </div>
 
+    <!-- Scroll Progress -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
+    <!-- Floating Leaves Background -->
+    <div class="floating-leaves-bg" aria-hidden="true">
+        <span class="fl fl1">�</span>
+        <span class="fl fl2">🌿</span>
+        <span class="fl fl3">🍃</span>
+        <span class="fl fl4">🌿</span>
+        <span class="fl fl5">🍃</span>
+        <span class="fl fl6">🌿</span>
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <span class="logo-icon">🌿</span>
+            <div class="nav-inner">
+                <a href="#home" class="logo">
+                    <span class="logo-leaf">🌿</span>
                     <span class="logo-text">VITAMORA</span>
-                </div>
+                </a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#trust">Why Us</a></li>
                     <li><a href="#products">Products</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#media">Farm Story</a></li>
                     <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#feedback">Feedback</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </div>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-actions">
+                    <a href="#products" class="nav-cta">Shop Now</a>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                        <span></span><span></span><span></span>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- ===== HERO SLIDER ===== -->
     <section class="hero" id="home">
-        <div class="hero-background"></div>
-        <div class="floating-leaves">
-            <div class="leaf leaf-1">🍃</div>
-            <div class="leaf leaf-2">🌿</div>
-            <div class="leaf leaf-3">🍃</div>
+        <div class="slider" id="slider">
+
+            <!-- Slide 1: Farmer with moringa leaves -->
+            <div class="slide slide-1 active">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600&q=80')"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">🌾 Farm Fresh</span>
+                    <h1>Pure Nutrition<br>from Nature</h1>
+                    <p>Premium Moringa &amp; Amla Powder – Direct from Farms</p>
+                    <a href="#products" class="btn-hero">Shop Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Slide 2: Moringa leaves to powder -->
+            <div class="slide slide-2">
+                <img src="img.png.jpeg" height="900px" width="1500px">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">🌿 100% Natural</span>
+                    <h1>From Leaf<br>to Powder</h1>
+                    <p>Moringa leaves carefully dried &amp; ground to preserve every nutrient</p>
+                    <a href="#products" class="btn-hero">Explore Moringa <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Slide 3: Amla harvest -->
+            <div class="slide slide-3">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80')"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">🍃 Vitamin C Rich</span>
+                    <h1>Amla – Nature's<br>Superfood</h1>
+                    <p>Harvested fresh from organic farms, packed with Vitamin C &amp; antioxidants</p>
+                    <a href="#products" class="btn-hero">Explore Amla <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Slide 4: Product shot -->
+            <div class="slide slide-4">
+                <img src="re.jpg" height="900px" width="1500px">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">🌱 No Chemicals</span>
+                    <h1>Pure. Natural.<br>Powerful.</h1>
+                    <p>Eco-friendly packaging, zero preservatives, 100% farm-to-table</p>
+                    <a href="#products" class="btn-hero">Buy Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Leaf-shaped transition overlay -->
+            <div class="leaf-transition" id="leafTransition" aria-hidden="true">
+                <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+                    <path class="leaf-path" d="M720,0 C900,150 1200,200 1440,100 L1440,900 L0,900 L0,100 C240,200 540,150 720,0Z"/>
+                </svg>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-next" id="sliderNext" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Dots -->
+            <div class="slider-dots" id="sliderDots">
+                <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="dot" data-index="2" aria-label="Slide 3"></button>
+                <button class="dot" data-index="3" aria-label="Slide 4"></button>
+            </div>
         </div>
+
+        <!-- Scroll hint -->
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Leaf divider -->
+    <div class="leaf-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1350,20 1440,40 L1440,80 L0,80Z" fill="#f7f4ef"/>
+        </svg>
+    </div>
+
+    <!-- ===== TRUST SECTION ===== -->
+    <section class="trust" id="trust">
+        <div class="trust-farm-bg" aria-hidden="true"></div>
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title fade-in">VITAMORA</h1>
-                <p class="hero-tagline fade-in-delay-1">Pure Nature. Powerful Health.</p>
-                <p class="hero-description fade-in-delay-2">
-                    Experience the power of nature with our premium organic supplements. 
-                    Carefully sourced, naturally processed, and scientifically backed for your wellness journey.
-                </p>
-                <div class="hero-buttons fade-in-delay-3">
-                    <a href="#products" class="btn btn-primary">Explore Products</a>
-                    <a href="#benefits" class="btn btn-secondary">Know Benefits</a>
+            <div class="trust-grid">
+                <div class="trust-card scroll-reveal">
+                    <div class="trust-icon-wrap">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>100% Natural Products</h3>
+                    <p>Grown without pesticides or synthetic fertilizers. Pure as nature intended.</p>
+                </div>
+                <div class="trust-card scroll-reveal" style="--delay:0.15s">
+                    <div class="trust-icon-wrap">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Direct from Farmers</h3>
+                    <p>We partner directly with local farmers, ensuring freshness and fair trade.</p>
+                </div>
+                <div class="trust-card scroll-reveal" style="--delay:0.3s">
+                    <div class="trust-icon-wrap">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>No Chemicals or Preservatives</h3>
+                    <p>Zero additives, zero preservatives. Just pure plant goodness in every spoon.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Leaf divider -->
+    <div class="leaf-divider leaf-divider-flip" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1350,20 1440,40 L1440,80 L0,80Z" fill="#fff"/>
+        </svg>
+    </div>
 
+    <!-- ===== PRODUCTS SECTION ===== -->
     <section class="products" id="products">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Premium Products</h2>
-                <p class="section-subtitle">Nature's finest, delivered to you</p>
+            <div class="section-head scroll-reveal">
+                <span class="section-tag">Our Products</span>
+                <h2>Nature's Best, Delivered</h2>
+                <p>Only two products. Both extraordinary.</p>
             </div>
+
             <div class="products-grid">
-                <div class="product-card" data-product="moringa">
-                    <div class="product-image">
+
+                <!-- Moringa -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-img-wrap">
                         <div class="product-badge">Bestseller</div>
-                        <div class="product-img-placeholder moringa-bg">
-                            <span class="product-icon"><img src="mori.png" height="340px" width="435px"</span>
+                        <img src="mori.png" alt="Moringa Powder 200g" class="product-img" loading="lazy">
+                        <div class="product-img-overlay">
+                            <a href="#" class="quick-view-btn">Quick View</a>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Moringa Powder</h3>
-                        <p class="product-short-desc">Rich in vitamins & antioxidants • Boosts immunity</p>
-                        <div class="product-price">₹299</div>
-                        <button class="btn btn-product" onclick="openProductModal('moringa')">View Details</button>
+                    <div class="product-body">
+                        <div class="product-tag">🌿 Moringa Powder</div>
+                        <h3>Moringa Powder</h3>
+                        <p class="product-weight">200g – Eco-Friendly Pack</p>
+                        <ul class="product-benefits">
+                            <li><i class="fas fa-bolt"></i> Boosts Energy</li>
+                            <li><i class="fas fa-shield-alt"></i> Strengthens Immunity</li>
+                        </ul>
+                        <div class="product-footer">
+                            <div class="product-price">₹250</div>
+                            <a href="https://wa.me/917225906842?text=I%20want%20to%20buy%20Moringa%20Powder%20200g%20-%20%E2%82%B9250" class="btn-buy" target="_blank" rel="noopener"></a>
+                                Buy Now <i class="fas fa-shopping-bag"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="product-card" data-product="amla">
-                    <div class="product-image">
-                        <div class="product-badge">Popular</div>
-                        <div class="product-img-placeholder amla-bg">
-                            <span class="product-icon"><img src="aml.jpg" height="340px" width="435px"</span>
+                <!-- Amla -->
+                <div class="product-card scroll-reveal" style="--delay:0.2s">
+                    <div class="product-img-wrap">
+                        <div class="product-badge product-badge-amla">Popular</div>
+                        <img src="aml.jpg" alt="Amla Powder 200g" class="product-img" loading="lazy">
+                        <div class="product-img-overlay">
+                            <a href="#" class="quick-view-btn">Quick View</a>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Amla Powder</h3>
-                        <p class="product-short-desc">High in Vitamin C • Improves digestion & skin health</p>
-                        <div class="product-price">₹329</div>
-                        <button class="btn btn-product" onclick="openProductModal('amla')">View Details</button>
+                    <div class="product-body">
+                        <div class="product-tag product-tag-amla">🍃 Amla Powder</div>
+                        <h3>Amla Powder</h3>
+                        <p class="product-weight">200g – Eco-Friendly Pack</p>
+                        <ul class="product-benefits">
+                            <li><i class="fas fa-lemon"></i> Rich in Vitamin C</li>
+                            <li><i class="fas fa-spa"></i> Hair &amp; Skin Health</li>
+                        </ul>
+                        <div class="product-footer">
+                            <div class="product-price">₹280</div>
+                            <a href="https://wa.me/917225906842?text=I%20want%20to%20buy%20Amla%20Powder%20200g%20-%20%E2%82%B9280" class="btn-buy btn-buy-amla" target="_blank" rel="noopener">
+                                Buy Now <i class="fas fa-shopping-bag"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <div class="modal" id="productModal">
-        <div class="modal-overlay" onclick="closeProductModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeProductModal()">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <div class="modal-img-placeholder" id="modalImage">
-                        <span class="modal-icon" id="modalIcon"></span>
-                    </div>
-                </div>
-                <div class="modal-info">
-                    <h2 class="modal-title" id="modalTitle"></h2>
-                    <div class="modal-price" id="modalPrice"></div>
-                    
-                    <div class="modal-tabs">
-                        <button class="tab-btn active" onclick="switchTab('description')">Description</button>
-                        <button class="tab-btn" onclick="switchTab('benefits')">Benefits</button>
-                        <button class="tab-btn" onclick="switchTab('usage')">Usage</button>
-                    </div>
-
-                    <div class="tab-content active" id="description-tab">
-                        <p id="modalDescription"></p>
-                    </div>
-
-                    <div class="tab-content" id="benefits-tab">
-                        <ul class="benefits-list" id="modalBenefits"></ul>
-                    </div>
-
-                    <div class="tab-content" id="usage-tab">
-                        <div id="modalUsage"></div>
-                    </div>
-
-                    <button class="btn btn-primary btn-full">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section class="benefits" id="benefits">
+    <!-- ===== VIDEO / MEDIA SECTION ===== -->
+    <section class="media" id="media">
+        <div class="media-overlay" aria-hidden="true"></div>
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Health Benefits</h2>
-                <p class="section-subtitle">Transform your wellness naturally</p>
+            <div class="section-head section-head-light scroll-reveal">
+                <span class="section-tag section-tag-light">Our Farm Story</span>
+                <h2>From Field to Your Home</h2>
+                <p>Watch how we grow, harvest, and process nature's finest superfoods</p>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-shield-alt"></i>
+
+            <div class="media-grid">
+                <div class="media-video-wrap scroll-reveal">
+                    <video autoplay muted loop playsinline class="farm-video" poster="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=60">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Moringa Farming &amp; Processing</span>
                     </div>
-                    <h3>Boost Immunity</h3>
-                    <p>Strengthen your body's natural defense system with powerful antioxidants</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-heartbeat"></i>
+
+                <div class="media-info scroll-reveal" style="--delay:0.2s">
+                    <div class="media-step">
+                        <div class="step-num">01</div>
+                        <div class="step-text">
+                            <h4>Organic Farming</h4>
+                            <p>Our farmers grow moringa and amla using traditional, chemical-free methods on fertile Indian soil.</p>
+                        </div>
                     </div>
-                    <h3>Improves Digestion</h3>
-                    <p>Support healthy gut function and enhance nutrient absorption</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-spa"></i>
+                    <div class="media-step">
+                        <div class="step-num">02</div>
+                        <div class="step-text">
+                            <h4>Natural Harvesting</h4>
+                            <p>Hand-picked at peak ripeness to ensure maximum nutritional value in every batch.</p>
+                        </div>
                     </div>
-                    <h3>Enhances Skin Health</h3>
-                    <p>Achieve radiant, glowing skin with natural vitamins and minerals</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-leaf"></i>
+                    <div class="media-step">
+                        <div class="step-num">03</div>
+                        <div class="step-text">
+                            <h4>Sun-Dried &amp; Ground</h4>
+                            <p>Leaves and fruits are naturally dried under the sun, then cold-ground to preserve nutrients.</p>
+                        </div>
                     </div>
-                    <h3>Detoxifies Body</h3>
-                    <p>Cleanse and purify your system naturally for optimal health</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
+                    <div class="media-step">
+                        <div class="step-num">04</div>
+                        <div class="step-text">
+                            <h4>Eco-Packed &amp; Shipped</h4>
+                            <p>Packed in eco-friendly pouches with zero preservatives and delivered fresh to your door.</p>
+                        </div>
                     </div>
-                    <h3>Increases Energy</h3>
-                    <p>Feel revitalized and energized throughout your day</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== REVIEWS ===== -->
     <section class="reviews" id="reviews">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Customer Reviews</h2>
-                <p class="section-subtitle">What our customers say</p>
+            <div class="section-head scroll-reveal">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Customers Say</h2>
+                <p>Real people, real results</p>
             </div>
-            <div class="reviews-carousel">
-                <button class="carousel-btn prev" onclick="prevReview()">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="reviews-container" id="reviewsContainer">
+            <div class="reviews-track-wrap">
+                <button class="rev-btn rev-prev" id="revPrev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+                <div class="reviews-track" id="reviewsTrack">
                     <div class="review-card active">
                         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Amazing product! My energy levels improved significantly within just two weeks. Highly recommend VITAMORA!"</p>
-                        <div class="review-author">
-                            <div class="author-avatar">P</div>
-                            <div class="author-info">
-                                <h4>Priya Sharma</h4>
-                                <span>Verified Buyer</span>
-                            </div>
+                        <p>"My energy levels improved significantly within two weeks. VITAMORA moringa powder is genuinely pure!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">P</div>
+                            <div><strong>Priya Sharma</strong><span>Verified Buyer</span></div>
                         </div>
                     </div>
                     <div class="review-card">
                         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Very pure and effective. My digestion has improved and I feel more active. The quality is outstanding!"</p>
-                        <div class="review-author">
-                            <div class="author-avatar">R</div>
-                            <div class="author-info">
-                                <h4>Rajesh Kumar</h4>
-                                <span>Verified Buyer</span>
-                            </div>
+                        <p>"Amla powder has transformed my skin and hair. I can feel the difference in just one month of use."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">R</div>
+                            <div><strong>Rajesh Kumar</strong><span>Verified Buyer</span></div>
                         </div>
                     </div>
                     <div class="review-card">
                         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Best natural supplement I've tried. My skin is glowing and I feel healthier overall. Thank you VITAMORA!"</p>
-                        <div class="review-author">
-                            <div class="author-avatar">A</div>
-                            <div class="author-info">
-                                <h4>Anita Desai</h4>
-                                <span>Verified Buyer</span>
-                            </div>
+                        <p>"Best natural supplement I've tried. My immunity has improved and I rarely fall sick now. Thank you VITAMORA!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">A</div>
+                            <div><strong>Anita Desai</strong><span>Verified Buyer</span></div>
                         </div>
                     </div>
                     <div class="review-card">
                         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Excellent quality and fast delivery. I've been using both products for a month and the results are amazing!"</p>
-                        <div class="review-author">
-                            <div class="author-avatar">S</div>
-                            <div class="author-info">
-                                <h4>Suresh Patel</h4>
-                                <span>Verified Buyer</span>
-                            </div>
+                        <p>"Excellent quality, fast delivery, and the packaging is eco-friendly. Highly recommend both products!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">S</div>
+                            <div><strong>Suresh Patel</strong><span>Verified Buyer</span></div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn next" onclick="nextReview()">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <button class="rev-btn rev-next" id="revNext" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
 
-
-    <section class="feedback" id="feedback">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Share Your Feedback</h2>
-                <p class="section-subtitle">We'd love to hear from you</p>
-            </div>
-            <div class="feedback-content">
-                <form class="feedback-form" id="feedbackForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                        <span class="error-message" id="nameError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message" id="emailError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <span class="error-message" id="messageError"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <span class="btn-text">Send Feedback</span>
-                        <span class="btn-loader"></span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <div class="success-popup" id="successPopup">
-        <div class="success-content">
-            <div class="success-icon">✓</div>
-            <h3>Thank You!</h3>
-            <p>Your feedback has been sent successfully.</p>
-        </div>
-    </div>
-
+    <!-- ===== CONTACT ===== -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">We're here to help</p>
+            <div class="section-head scroll-reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2>We're Here to Help</h2>
             </div>
             <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
+                <div class="contact-card scroll-reveal">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
                     <p>vitamora683@gmail.com</p>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
+                <div class="contact-card scroll-reveal" style="--delay:0.15s">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h4>Phone / WhatsApp</h4>
                     <p>+91 7225906842</p>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Address</h3>
-                    <p>sawariya campus rau indore, India</p>
+                <div class="contact-card scroll-reveal" style="--delay:0.3s">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Address</h4>
+                    <p>Sawariya Campus, Rau, Indore, India</p>
                 </div>
             </div>
-            <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <div class="social-row scroll-reveal">
+                <a href="#" class="soc-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/917225906842" class="soc-icon" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="soc-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="soc-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </section>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="logo-icon">🌿</span>
-                        <span class="logo-text">VITAMORA</span>
-                    </div>
-                    <p>Pure Nature. Powerful Health.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">🌿 VITAMORA</div>
+                    <p>Pure Nutrition from Nature.<br>Moringa &amp; Amla – Direct from Farms.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#products">Products</a></li>
-                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#media">Farm Story</a></li>
                         <li><a href="#reviews">Reviews</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
+                <div class="footer-links">
+                    <h5>Support</h5>
                     <ul>
-                        <li><a href="#feedback">Feedback</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 VITAMORA. All rights reserved.</p>
+                <p>&copy; 2025 VITAMORA. All rights reserved. Made with 🌿 in India.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
